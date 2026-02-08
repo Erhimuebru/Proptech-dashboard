@@ -2,7 +2,7 @@ import Image from "next/image";
 
 export default function Navbar() {
   return (
-    <header className="w-full bg-[#105B48] text-white h-[82px] flex items-center">
+    <header className="w-full bg-[#105B48] text-white h-[82px] flex items-center ">
       <div className="max-w-[1440px] mx-auto w-full flex items-center justify-between px-4">
         {/* Left: Logo */}
         <div className="flex items-center gap-6 text-lg font-semibold">
@@ -72,7 +72,6 @@ export default function Navbar() {
         </div>
       </div>
 
-      
     </header>
   );
 }
