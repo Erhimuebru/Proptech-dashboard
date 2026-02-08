@@ -7,7 +7,7 @@ export default function Navbar() {
         {/* Left: Logo */}
         <div className="flex items-center gap-6 text-lg font-semibold">
           <Image
-            src="/icons/logo.png"
+            src="/icons/expertlisting.png"
             alt="Logo"
             width={200}
             height={26}

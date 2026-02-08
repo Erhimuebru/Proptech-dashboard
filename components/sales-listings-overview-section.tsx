@@ -127,7 +127,7 @@ export default function SalesOverview() {
   </button>
 
   {/* Next */}
-  <button className="absolute w-[26px] h-[26px] flex item-center justify-center -right-5 top-1/2 z-10 -translate-y-1/2 rounded-full border border-[#E4E4E4] bg-[#E4E4E4] p-2 shadow-sm hover:bg-[#F5F5F5]">
+  <button className="absolute w-[26px] h-[26px] flex item-center justify-center -right-8.5 top-1/2 z-10 -translate-y-1/2 rounded-full border border-[#E4E4E4] bg-[#E4E4E4] p-2 shadow-sm hover:bg-[#F5F5F5]">
   <Image
     src={"/icons/Vector (5).png"}
     alt={"Next"}
@@ -136,7 +136,8 @@ export default function SalesOverview() {
   />
   </button>
 
-  <ResponsiveContainer width="100%" height="100%" className="">
+  <ResponsiveContainer width="100%" height="100%" className=" shadow-[4px_0_10px_-2px_rgba(0,0,0,0.08)]" >
+
     <BarChart data={chartData} barGap={3} barCategoryGap={10}>
       {/* <CartesianGrid  vertical={false} /> */}
       <XAxis dataKey="month" tickLine={false} axisLine={false} />
@@ -193,47 +194,10 @@ export default function SalesOverview() {
   </div>
 </div>
 
-
-
-
     </div>
   );
 }
 
-export function ListingsOverview() {
-  return (
-    <div className="rounded-2xl border border-[#E4E4E4] bg-white p-6">
-      <div className="mb-4 flex items-center justify-between">
-        <div className="flex items-center gap-2">
-          <div className="rounded-lg bg-emerald-50 p-2 text-emerald-600">
-            <Home size={18} />
-          </div>
-          <h3 className="text-lg font-semibold">Listings Overview</h3>
-        </div>
-
-        <a href="#" className="text-sm font-medium text-emerald-600">
-          View all
-        </a>
-      </div>
-
-      <div className="grid grid-cols-3 gap-4 text-center">
-        <OverviewStat label="Total" value="1.8k" />
-        <OverviewStat label="Active" value="80" />
-        <OverviewStat label="Archived" value="1k" />
-      </div>
-    </div>
-  );
-}
-
-
-function OverviewStat({ label, value }: { label: string; value: string }) {
-  return (
-    <div>
-      <p className="mb-1 text-sm text-gray-500">{label}</p>
-      <p className="text-xl font-semibold">{value}</p>
-    </div>
-  );
-}
 
 
 

@@ -99,7 +99,7 @@ export default function DashboardPage() {
       {/* Users Overview */}
       <OverviewCard
         icon={<Image
-            src={"/icons/Profile.png"}
+            src={"/icons/user.png"}
             alt={"Previous"}
             width={24}
             height={24}
