@@ -1,9 +1,8 @@
 "use client";
 import Image from "next/image";
-import { Briefcase, Users } from "lucide-react";
 import Carousel from "./carousel";
 import OverviewCard from "./overview-card";
-import SalesOverview, { ListingsOverview} from "./sales-listings-overview-section";
+import SalesOverview from "./sales-listings-overview-section";
 
 export default function DashboardPage() {
   const heroCarousel = [

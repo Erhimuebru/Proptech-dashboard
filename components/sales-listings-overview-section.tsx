@@ -1,6 +1,6 @@
 "use client";
 import Image from "next/image";
-import { Briefcase, Home, Users } from "lucide-react";
+import {  Home } from "lucide-react";
 import {
   BarChart,
   Bar,
@@ -8,9 +8,8 @@ import {
   YAxis,
   Tooltip,
   ResponsiveContainer,
-  CartesianGrid,
+
 } from "recharts";
-import OverviewCard from "./overview-card";
 
 const chartData = [
     { month: "Jan", inflow: 32000000, outflow: 18000000, profit: 14000000 },
