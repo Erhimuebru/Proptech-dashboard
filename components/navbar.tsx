@@ -3,7 +3,7 @@
 import { useState, useRef } from "react";
 import Image from "next/image";
 import clsx from "clsx";
-import { Menu, X, Lock, MessageCircleMore, Users, MenuSquare, LucidePaintBucket, LogIn } from "lucide-react";
+import { Menu, X, Lock, MessageCircleMore, Users, MenuSquare, LucidePaintBucket, LogOut } from "lucide-react";
 
 export default function Navbar() {
     const userName = "Dylan Frank"
@@ -164,7 +164,7 @@ export default function Navbar() {
                         Change password
                       </button>
                       <button className="w-full flex items-center gap-3 px-4 py-2.5 text-sm text-red-600 hover:bg-red-50 transition font-semibold text-[#191919] pb-6 pt-4 cursor-pointer">
-                        <LogIn size={24} />
+                        <LogOut size={24} />
                         Logout
                       </button>
                     </div>
