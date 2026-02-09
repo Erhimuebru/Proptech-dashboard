@@ -89,7 +89,7 @@ export default function SalesOverview() {
           </p>
         </div>
 
-        <button className="rounded-full border border-[#D6D6D6] text-[#191919] h-[40px] sm:h-[46px] px-4 text-xs sm:text-sm font-medium hover:bg-muted">
+        <button className="rounded-full border border-[#D6D6D6] text-[#191919] h-[40px] cursor-pointer sm:h-[46px] px-4 text-xs sm:text-sm font-medium hover:bg-muted">
           View Transactions
         </button>
       </div>
@@ -99,7 +99,7 @@ export default function SalesOverview() {
         {["1 Week", "1 Month", "1 Year"].map((item, i) => (
           <button
             key={item}
-            className={`rounded-sm px-3 py-1.5 text-xs sm:text-sm text-[#191919] ${
+            className={`rounded-sm px-3 py-1.5 text-xs sm:text-sm text-[#191919] cursor-pointer ${
               i === 2
                 ? "bg-[#F5F5F5] hover:bg-[#E4E4E7] font-semibold"
                 : ""

@@ -48,10 +48,11 @@ export default function Navbar() {
             width={200}
             height={26}
             priority
+            className="cursor-pointer"
           />
 
           {/* Desktop Actions */}
-          <div className="hidden md:flex items-center gap-5">
+          <div className="hidden md:flex items-center gap-5 cursor-pointer">
             {[
               "Budgeting",
               "calendar",
@@ -59,7 +60,7 @@ export default function Navbar() {
               "Payout Center",
               "Marketplace",
             ].map((icon) => (
-              <button key={icon} className="hover:opacity-80">
+              <button key={icon} className="hover:opacity-80 cursor-pointer">
                 <Image
                   src={`/icons/${icon}.png`}
                   alt={icon}
@@ -69,7 +70,7 @@ export default function Navbar() {
               </button>
             ))}
 
-            <div className="flex h-8 w-8 items-center justify-center rounded-full bg-white text-[#105B48] font-bold">
+            <div className="flex h-8 w-8 items-center justify-center rounded-full bg-white text-[#105B48] cursor-pointer font-bold">
               D
             </div>
           </div>
@@ -77,7 +78,7 @@ export default function Navbar() {
           {/* Mobile Menu Button */}
           <button
             onClick={() => setOpen(true)}
-            className="md:hidden"
+            className="md:hidden cursor-pointer"
           >
             <Menu size={28} />
           </button>
@@ -95,7 +96,7 @@ export default function Navbar() {
                 key={item.label}
                 onClick={() => setActive(item.label)}
                 className={clsx(
-                  "flex items-center gap-1.5 h-[38px] px-4 rounded-[8px] text-sm font-[600] transition-all",
+                  "flex items-center gap-1.5 h-[38px] px-4 rounded-[8px] text-sm font-[600] transition-all cursor-pointer",
                   isActive
                     ? "bg-[#176D5826] text-[#176D58]"
                     : "text-gray-700 hover:opacity-80"

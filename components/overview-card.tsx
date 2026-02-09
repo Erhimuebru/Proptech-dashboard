@@ -38,7 +38,7 @@ export default function OverviewCard({
 
         <button
           onClick={onViewAll}
-          className="flex items-center gap-1 text-sm font-medium text-[#4545FE] hover:underline"
+          className="flex items-center gap-1 text-sm font-medium text-[#4545FE] hover:underline cursor-pointer"
         >
           View all
           <ChevronRight className="h-4 w-4" />
