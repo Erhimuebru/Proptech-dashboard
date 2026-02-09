@@ -6,7 +6,7 @@ export default function Home() {
   return (
     <div className="flex-col">
     <Navbar/>
-    <SubNavbar/>
+    {/* <SubNavbar/> */}
     <DashboardPage/>
     </div>
   );

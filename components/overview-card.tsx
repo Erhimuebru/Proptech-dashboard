@@ -21,12 +21,13 @@ export default function OverviewCard({
   onViewAll,
 }: OverviewCardProps) {
   return (
-    <div className="rounded-[16px] bg-white border border-[#E4E4E4] h-[162px]">
+    <div className="rounded-[16px] bg-white border border-[#E4E4E4] min-h-[180px] flex flex-col">
+      
       {/* Header */}
-      <div className=" flex items-center justify-between bg-[#F9FAFB] h-[50px] border border-[#E4E4E4] rounded-t-[16px] p-4">
-        <div className="flex items-center gap-1 ">
+      <div className="flex items-center justify-between bg-[#F9FAFB] h-[50px] border-b border-[#E4E4E4] rounded-t-[16px] px-4">
+        <div className="flex items-center gap-2">
           {icon && (
-            <div className="flex h-10 w-10 items-center justify-center rounded-full">
+            <div className="flex h-8 w-8 items-center justify-center rounded-full">
               {icon}
             </div>
           )}
@@ -44,8 +45,8 @@ export default function OverviewCard({
         </button>
       </div>
 
-      {/* Stats */}
-      <div className="grid grid-cols-3 gap-8 p-4">
+      {/* Stats (center vertically) */}
+      <div className="grid grid-cols-3 gap-8 p-6 flex-1 place-content-center">
         {stats.map((stat) => (
           <div key={stat.label}>
             <p className="text-[14px] text-[#525252]">{stat.label}</p>

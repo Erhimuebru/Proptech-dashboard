@@ -40,11 +40,11 @@ export default function DashboardPage() {
       title: "Corporate Park Suites",
     },
     {
-        id: 15,
-        image: "/carousel-images/building1.jpg",
-        subtitle: "Most Watchlisted",
-        title: "Urban Prime Plaza Premiere",
-      },
+      id: 15,
+      image: "/carousel-images/building1.jpg",
+      subtitle: "Most Watchlisted",
+      title: "Urban Prime Plaza Premiere",
+    },
   ];
 
   const apartmentCarousel = [
@@ -55,78 +55,77 @@ export default function DashboardPage() {
       title: "Luxury Apartments",
     },
     {
-        id: 4,
-        image: "/carousel-images/building3.jpg",
-        subtitle: "Office Space",
-        title: "Downtown Office Complex",
-      },
-      {
-        id: 15,
-        image: "/carousel-images/building1.jpg",
-        subtitle: "Most Watchlisted",
-        title: "Urban Prime Plaza Premiere",
-      },
+      id: 4,
+      image: "/carousel-images/building3.jpg",
+      subtitle: "Office Space",
+      title: "Downtown Office Complex",
+    },
+    {
+      id: 15,
+      image: "/carousel-images/building1.jpg",
+      subtitle: "Most Watchlisted",
+      title: "Urban Prime Plaza Premiere",
+    },
   ];
 
   return (
     <div className="mx-auto max-w-[1440px] px-6">
+      <h2 className="text-[#191919] font-bold text-[20px] mt-4 mb-4  ">
+        Welcome, Ahmed
+      </h2>
 
-        <h2 className="text-[#191919] font-bold text-[20px] mt-4 mb-4  ">Welcome, Ahmed</h2>
+      <div className="grid grid-cols-1 gap-3 xl:grid-cols-3 mb-6">
+        <div className="xl:col-span-2">
+          <SalesOverview />
+        </div>
+        <div className="space-y-6">
+          {/* Listings Overview */}
+          <OverviewCard
+            icon={
+              <Image
+                src={"/icons/solar_home-linear.png"}
+                alt={"Previous"}
+                width={24}
+                height={24}
+              />
+            }
+            title="Listings Overview"
+            stats={[
+              { label: "Total", value: "1.8k" },
+              { label: "Active", value: "80" },
+              { label: "Archived", value: "1k" },
+            ]}
+            onViewAll={() => console.log("View all listings")}
+          />
 
-    
-          <div className="grid grid-cols-1 gap-3 xl:grid-cols-3 mb-6">
-  <div className="xl:col-span-2">
-    <SalesOverview />
-  </div>
-  <div className="space-y-6">
-      {/* Listings Overview */}
-      <OverviewCard
-        icon={  <Image
-            src={"/icons/solar_home-linear.png"}
-            alt={"Previous"}
-            width={24}
-            height={24}
-          />}
-        title="Listings Overview"
-        stats={[
-          { label: "Total", value: "1.8k" },
-          { label: "Active", value: "80" },
-          { label: "Archived", value: "1k" },
-        ]}
-        onViewAll={() => console.log("View all listings")}
-      />
+          {/* Users Overview */}
+          <OverviewCard
+            icon={
+              <Image
+                src={"/icons/user.png"}
+                alt={"Previous"}
+                width={24}
+                height={24}
+              />
+            }
+            title="Users Overview"
+            stats={[
+              { label: "Total", value: "20.7k" },
+              { label: "Riders", value: "8.5k" },
+              { label: "Subscribers", value: "7.5k" },
+            ]}
+            onViewAll={() => console.log("View all users")}
+          />
+        </div>
+      </div>
+      <div className="grid grid-cols-1 gap-3 md:grid-cols-2 xl:grid-cols-3 pb-32">
+       
+        <Carousel autoPlay interval={5000} items={heroCarousel} />
 
-      {/* Users Overview */}
-      <OverviewCard
-        icon={<Image
-            src={"/icons/user.png"}
-            alt={"Previous"}
-            width={24}
-            height={24}
-          />}
-        title="Users Overview"
-        stats={[
-          { label: "Total", value: "20.7k" },
-          { label: "Riders", value: "8.5k" },
-          { label: "Subscribers", value: "7.5k" },
-        ]}
-        onViewAll={() => console.log("View all users")}
-      />
-    </div>
+        <Carousel autoPlay interval={7000} items={officeCarousel} />
 
-</div>
-  <div className="grid grid-cols-1 gap-3 md:grid-cols-2 xl:grid-cols-3">
-      {/* Hero carousel (autoplay) */}
-      <Carousel autoPlay interval={5000} items={heroCarousel} />
-
-      {/* Secondary carousel (slower autoplay) */}
-      <Carousel autoPlay interval={7000} items={officeCarousel} />
-
-      {/* Static carousel (dots only) */}
-      <Carousel autoPlay interval={9000} items={apartmentCarousel} />
-    </div>
-
-  
+        <Carousel autoPlay interval={9000} items={apartmentCarousel} />
+      </div>
     </div>
   );
 }
