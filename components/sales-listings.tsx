@@ -43,7 +43,7 @@ function MetricCard({
   color: string;
 }) {
   return (
-    <div className="rounded-xl border border-[#E4E4E4] bg-white min-h-[80px] p-3 sm:p-5">
+    <div className="rounded-xl border border-[#E4E4E4] bg-white min-h-[80px] p-3 sm:pr-4 sm:pt-5">
       <p className={`text-[16px] sm:text-[19px] font-bold ${color}`}>
         {value}
       </p>

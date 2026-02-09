@@ -2,7 +2,7 @@
 import Image from "next/image";
 import Carousel from "./carousel";
 import OverviewCard from "./overview-card";
-import SalesOverview from "./sales-listings-overview-section";
+import SalesOverview from "./sales-listings";
 
 export default function DashboardPage() {
   const heroCarousel = [
@@ -118,7 +118,7 @@ export default function DashboardPage() {
           />
         </div>
       </div>
-      <div className="grid grid-cols-1 gap-3 md:grid-cols-2 xl:grid-cols-3 pb-32">
+      <div className="grid grid-cols-1 gap-3 md:grid-cols-2 xl:grid-cols-3 pb-32 sm:pb-10">
        
         <Carousel autoPlay interval={5000} items={heroCarousel} />
 
