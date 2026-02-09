@@ -75,6 +75,27 @@ export default function Carousel({
         </motion.div>
       </div>
 
+
+      {/* DOT INDICATORS */}
+<div className="absolute bottom-4 left-1/2 z-20 flex -translate-x-1/2 gap-2">
+  {items.map((_, index) => (
+    <button
+      key={index}
+      onClick={() => setActiveIndex(index)}
+      className={`
+        h-2 w-2 rounded-full transition-all duration-300
+        ${
+          activeIndex === index
+            ? "bg-white w-2"
+            : "bg-white/40 hover:bg-white/70"
+        }
+      `}
+      aria-label={`Go to slide ${index + 1}`}
+    />
+  ))}
+</div>
+
+
       {/* FLOATING CHAT ICON (NOT CLIPPED) */}
       {showChatIcon && (
         <button
