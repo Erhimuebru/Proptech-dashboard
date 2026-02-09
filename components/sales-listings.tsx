@@ -119,13 +119,13 @@ export default function SalesOverview() {
         <div className="relative h-[180px] sm:h-[220px] w-full">
               {/* Prev */}
               <div className="sm:block hidden">
-          <button className="absolute -left-2 top-1/2 -translate-y-1/2 z-10 h-7 w-7 flex items-center justify-center rounded-full border bg-[#F5F5F5]">
+          <button className="absolute cursor-pointer -left-2 top-1/2 -translate-y-1/2 z-10 h-7 w-7 flex items-center justify-center rounded-full border bg-[#F5F5F5]">
             <Image src="/icons/Vector (6).png" alt="" width={6} height={6} />
           </button></div>
 
           {/* Next */}
           <div className="sm:block hidden">
-          <button className="absolute   -right-4 top-1/2 -translate-y-1/2 z-10 h-7 w-7 flex items-center justify-center rounded-full border bg-[#E4E4E4]">
+          <button className="absolute cursor-pointer  -right-4 top-1/2 -translate-y-1/2 z-10 h-7 w-7 flex items-center justify-center rounded-full border bg-[#E4E4E4]">
             <Image src="/icons/Vector (5).png" alt="" width={6} height={6} />
           </button></div>
           <ResponsiveContainer width="100%" height="100%">

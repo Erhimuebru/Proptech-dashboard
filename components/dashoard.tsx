@@ -5,6 +5,9 @@ import OverviewCard from "./overview-card";
 import SalesOverview from "./sales-listings";
 
 export default function DashboardPage() {
+
+    const userName = "Ahmed"
+
   const heroCarousel = [
     {
       id: 1,
@@ -71,7 +74,7 @@ export default function DashboardPage() {
   return (
     <div className="mx-auto max-w-[1440px] px-6">
       <h2 className="text-[#191919] font-bold text-[20px] mt-4 mb-4  ">
-        Welcome, Ahmed
+        Welcome,{userName}
       </h2>
 
       <div className="grid grid-cols-1 gap-3 xl:grid-cols-3 mb-6">
