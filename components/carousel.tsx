@@ -15,7 +15,7 @@ interface CarouselProps {
   items: CarouselItem[];
   autoPlay?: boolean;
   interval?: number;
-  showChatIcon?: boolean; 
+  showChatIcon?: boolean;
   onChatClick?: () => void;
 }
 
@@ -40,46 +40,46 @@ export default function Carousel({
   }, [isAutoPlayEnabled, interval, items.length]);
 
   return (
-<div className="relative w-full">
-  {/* CLIPPED CAROUSEL */}
-  <div className="h-[286px] w-full overflow-hidden rounded-2xl">
-    <motion.div
-      className="flex h-full"
-      animate={{ x: `-${activeIndex * 100}%` }}
-      transition={{ duration: 0.6, ease: "easeInOut" }}
-    >
-      {items.map((item) => (
-        <div key={item.id} className="relative h-full w-full flex-shrink-0">
-          <img
-            src={item.image}
-            alt="carousel slide"
-            className="h-full w-full object-cover"
-          />
+    <div className="relative w-full">
+      {/* CLIPPED CAROUSEL */}
+      <div className="h-[286px] w-full overflow-hidden rounded-2xl">
+        <motion.div
+          className="flex h-full"
+          animate={{ x: `-${activeIndex * 100}%` }}
+          transition={{ duration: 0.6, ease: "easeInOut" }}
+        >
+          {items.map((item) => (
+            <div key={item.id} className="relative h-full w-full flex-shrink-0">
+              <img
+                src={item.image}
+                alt="carousel slide"
+                className="h-full w-full object-cover"
+              />
 
-          <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/20 to-transparent" />
+              <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/20 to-transparent" />
 
-          <div className="absolute bottom-6 left-6 mb-3">
-            {item.subtitle && (
-              <p className="mb-1 text-xs uppercase font-medium text-white">
-                {item.subtitle}
-              </p>
-            )}
-            {item.title && (
-              <h2 className="text-xl font-semibold text-white">
-                {item.title}
-              </h2>
-            )}
-          </div>
-        </div>
-      ))}
-    </motion.div>
-  </div>
+              <div className="absolute bottom-6 left-6 mb-3">
+                {item.subtitle && (
+                  <p className="mb-1 text-xs uppercase font-medium text-white">
+                    {item.subtitle}
+                  </p>
+                )}
+                {item.title && (
+                  <h2 className="text-xl font-semibold text-white">
+                    {item.title}
+                  </h2>
+                )}
+              </div>
+            </div>
+          ))}
+        </motion.div>
+      </div>
 
-  {/* FLOATING CHAT ICON (NOT CLIPPED) */}
-  {showChatIcon && (
-    <button
-      onClick={onChatClick}
-      className="
+      {/* FLOATING CHAT ICON (NOT CLIPPED) */}
+      {showChatIcon && (
+        <button
+          onClick={onChatClick}
+          className="
         absolute 
         -right-3 top-8
         z-20
@@ -93,17 +93,16 @@ export default function Carousel({
         transition
         cursor-pointer
       "
-    >
-       <Image
+        >
+          <Image
             src="/icons/messages-3.png"
             alt="Logo"
             width={24}
             height={24}
             priority
           />
-    </button>
-  )}
-</div>
-
+        </button>
+      )}
+    </div>
   );
 }

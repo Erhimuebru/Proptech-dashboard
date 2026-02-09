@@ -3,11 +3,20 @@
 import { useState, useRef } from "react";
 import Image from "next/image";
 import clsx from "clsx";
-import { Menu, X, Lock, MessageCircleMore, Users, MenuSquare, LucidePaintBucket, LogOut } from "lucide-react";
+import {
+  Menu,
+  X,
+  Lock,
+  MessageCircleMore,
+  Users,
+  MenuSquare,
+  LucidePaintBucket,
+  LogOut,
+} from "lucide-react";
 
 export default function Navbar() {
-    const userName = "Dylan Frank"
-    const userEmail ="dylanfrank96@gmail.com"
+  const userName = "Dylan Frank";
+  const userEmail = "dylanfrank96@gmail.com";
   const [active, setActive] = useState("Dashboard");
   const [open, setOpen] = useState(false);
   const [activeAction, setActiveAction] = useState<null | "Budgeting">(null);
@@ -15,8 +24,6 @@ export default function Navbar() {
   const [showUserDropdown, setShowUserDropdown] = useState(false);
   const [hoverUserDropdown, setHoverUserDropdown] = useState(false);
   const userDropdownRef = useRef<HTMLDivElement>(null);
-
-
 
   const NAV_ITEMS = [
     {
@@ -98,7 +105,7 @@ export default function Navbar() {
                 onClick={() => setShowUserDropdown(!showUserDropdown)}
                 className="flex h-8 w-8 items-center justify-center rounded-full bg-white text-[#105B48] cursor-pointer font-bold hover:shadow-md transition-shadow"
               >
-               {userName?.[0]}
+                {userName?.[0]}
               </div>
 
               {/* Hover Tooltip - Show Only Name */}
@@ -126,16 +133,13 @@ export default function Navbar() {
                     <div className="px-4 py-3 ">
                       <div className="flex items-center gap-3 p-5 border border-gray-300 rounded-lg mt-2">
                         <div className="flex h-10 w-10 items-center justify-center rounded-full text-white bg-[#105B48] font-bold text-sm">
-                        {userName?.[0]}
-
+                          {userName?.[0]}
                         </div>
                         <div>
                           <p className="font-semibold text-[#191919]">
-                          {userName}
+                            {userName}
                           </p>
-                          <p className="text-xs text-[#606060]">
-                            {userEmail}
-                          </p>
+                          <p className="text-xs text-[#606060]">{userEmail}</p>
                         </div>
                       </div>
                     </div>

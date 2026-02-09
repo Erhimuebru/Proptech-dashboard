@@ -44,9 +44,7 @@ function MetricCard({
 }) {
   return (
     <div className="rounded-xl border border-[#E4E4E4] bg-white min-h-[80px] p-3 sm:pr-4 sm:pt-5">
-      <p className={`text-[16px] sm:text-[19px] font-bold ${color}`}>
-        {value}
-      </p>
+      <p className={`text-[16px] sm:text-[19px] font-bold ${color}`}>{value}</p>
 
       <div className="mt-2 flex items-center gap-1 text-[10px] sm:text-[11px] whitespace-nowrap">
         <p className="text-[#3D3D3D] font-semibold">{label}</p>
@@ -77,7 +75,6 @@ function MetricCard({
 export default function SalesOverview() {
   return (
     <div className="rounded-2xl border border-[#E4E4E4] bg-white min-h-[350px] w-full">
-
       {/* Header */}
       <div className="mb-3 flex flex-col gap-3 sm:flex-row sm:items-center sm:justify-between px-4 sm:px-6 pt-4 sm:pt-6">
         <div>
@@ -100,9 +97,7 @@ export default function SalesOverview() {
           <button
             key={item}
             className={`rounded-sm px-3 py-1.5 text-xs sm:text-sm text-[#191919] cursor-pointer ${
-              i === 2
-                ? "bg-[#F5F5F5] hover:bg-[#E4E4E7] font-semibold"
-                : ""
+              i === 2 ? "bg-[#F5F5F5] hover:bg-[#E4E4E7] font-semibold" : ""
             }`}
           >
             {item}
@@ -114,41 +109,35 @@ export default function SalesOverview() {
 
       {/* Chart + Metrics */}
       <div className="grid grid-cols-1 gap-6 lg:grid-cols-2 p-3 sm:p-4">
-
         {/* Chart */}
         <div className="relative h-[180px] sm:h-[220px] w-full">
-              {/* Prev */}
-              <div className="sm:block hidden">
-          <button className="absolute cursor-pointer -left-2 top-1/2 -translate-y-1/2 z-10 h-7 w-7 flex items-center justify-center rounded-full border bg-[#F5F5F5]">
-            <Image src="/icons/Vector (6).png" alt="" width={6} height={6} />
-          </button></div>
+          {/* Prev */}
+          <div className="sm:block hidden">
+            <button className="absolute cursor-pointer -left-2 top-1/2 -translate-y-1/2 z-10 h-7 w-7 flex items-center justify-center rounded-full border bg-[#F5F5F5]">
+              <Image src="/icons/Vector (6).png" alt="" width={6} height={6} />
+            </button>
+          </div>
 
           {/* Next */}
           <div className="sm:block hidden">
-          <button className="absolute cursor-pointer  -right-4 top-1/2 -translate-y-1/2 z-10 h-7 w-7 flex items-center justify-center rounded-full border bg-[#E4E4E4]">
-            <Image src="/icons/Vector (5).png" alt="" width={6} height={6} />
-          </button></div>
+            <button className="absolute cursor-pointer  -right-4 top-1/2 -translate-y-1/2 z-10 h-7 w-7 flex items-center justify-center rounded-full border bg-[#E4E4E4]">
+              <Image src="/icons/Vector (5).png" alt="" width={6} height={6} />
+            </button>
+          </div>
           <ResponsiveContainer width="100%" height="100%">
             <BarChart data={chartData} barGap={4} barCategoryGap={12}>
               <XAxis dataKey="month" tickLine={false} axisLine={false} />
               <YAxis
                 domain={[0, 50_000_000]}
                 ticks={[
-                  0,
-                  10_000_000,
-                  20_000_000,
-                  30_000_000,
-                  40_000_000,
-                  50_000_000,
+                  0, 10_000_000, 20_000_000, 30_000_000, 40_000_000, 50_000_000,
                 ]}
                 tickFormatter={(v) => `${v / 1_000_000}m`}
                 tickLine={false}
                 axisLine={{ stroke: "#E4E4E4" }}
               />
               <Tooltip
-                formatter={(v) =>
-                  `₦${(v as number).toLocaleString()}`
-                }
+                formatter={(v) => `₦${(v as number).toLocaleString()}`}
               />
 
               <Bar dataKey="inflow" barSize={6} fill="#4545FE" />

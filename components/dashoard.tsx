@@ -5,8 +5,7 @@ import OverviewCard from "./overview-card";
 import SalesOverview from "./sales-listings";
 
 export default function DashboardPage() {
-
-    const userName = "Ahmed"
+  const userName = "Ahmed";
 
   const heroCarousel = [
     {
@@ -122,12 +121,16 @@ export default function DashboardPage() {
         </div>
       </div>
       <div className="grid grid-cols-1 gap-3 md:grid-cols-2 xl:grid-cols-3 pb-32 sm:pb-10">
-       
-        <Carousel autoPlay interval={5000} items={heroCarousel}  />
+        <Carousel autoPlay interval={5000} items={heroCarousel} />
 
         <Carousel autoPlay interval={7000} items={officeCarousel} />
 
-        <Carousel autoPlay interval={9000} items={apartmentCarousel} showChatIcon/>
+        <Carousel
+          autoPlay
+          interval={9000}
+          items={apartmentCarousel}
+          showChatIcon
+        />
       </div>
     </div>
   );

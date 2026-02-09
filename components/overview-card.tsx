@@ -22,7 +22,6 @@ export default function OverviewCard({
 }: OverviewCardProps) {
   return (
     <div className="rounded-[16px] bg-white border border-[#E4E4E4] min-h-[180px] flex flex-col">
-      
       {/* Header */}
       <div className="flex items-center justify-between bg-[#F9FAFB] h-[50px] border-b border-[#E4E4E4] rounded-t-[16px] px-4">
         <div className="flex items-center gap-2">
@@ -31,9 +30,7 @@ export default function OverviewCard({
               {icon}
             </div>
           )}
-          <h3 className="text-[14px] font-semibold text-[#292929]">
-            {title}
-          </h3>
+          <h3 className="text-[14px] font-semibold text-[#292929]">{title}</h3>
         </div>
 
         <button
