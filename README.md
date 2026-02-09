@@ -19,6 +19,7 @@ https://github.com/Erhimuebru/Proptech-dashboard.git
 - **Lucide React Icons**
 - **ShadCN UI**
 -**Recharts**
+-**Framer Motion**
 - **Vercel** (for deployment)
 
 ---
