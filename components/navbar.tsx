@@ -393,13 +393,16 @@ export default function Navbar() {
               onClick={(e) => e.stopPropagation()}
             >
               {/* Top Section */}
-
+              <div className="bg-[#0C2841] w-[440px] h-[210px]">
               <Image
                 src="/icons/media.png"
                 alt="Budgeting"
                 width={440}
                 height={216}
               />
+              </div>
+
+             
 
               {/* Content */}
               <div className="p-6 space-y-5">
